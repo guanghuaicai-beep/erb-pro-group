@@ -1,0 +1,229 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #b1a87e, #67c5ce);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 360px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  justify-content: center; /* Logo 置中 */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.line-simple-2 {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+      color: #666;
+
+    }
+
+    .line-simple-2::before, 
+    .line-simple-2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ddd;
+    }
+
+
+.form-title {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.subheading {
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.login-method {
+   display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -10px; 
+  margin-bottom: 1rem; 
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.input-group-text {
+  background: #f8f9fa;
+  border: none;
+  color: #555;
+  padding: 0.5rem;
+}
+.form-control {
+  flex: 1;
+  min-width: 0;
+  /*
+  border: none;
+  padding: 0.5rem;
+  background: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;*/
+}
+
+.form-control.is-valid {
+  border: 2px solid green;
+}
+
+.form-control.is-invalid {
+  border: 2px solid red;
+}
+
+
+.form-control:focus {
+  outline: none;
+}
+
+
+/*input box is red + exclamation mark */
+/*.form-control.is-invalid .error-mark {
+   display: inline;
+   color: red;
+   font-weight: bold;
+}
+*/
+
+
+
+.error-mark {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+
+.error {
+  font-size: 0.8rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+
+.error-message {
+  font-size: 0.8rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+  text-align: left;
+  display: block;
+}
+
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+.options a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Button */
+.glass-card .btn-signin {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+.glass-card .btn-signin:hover {
+  box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+  transform: scale(1.2);
+}
+
+/* Register */
+.register {
+  text-align: center;
+  font-size: 0.85rem;
+}
+.register a {
+  color: #aeefff;
+  text-decoration: none;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: -300px; 
+  background: #20c997; 
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-weight: bold;
+  transition: right 0.5s ease-in-out, opacity 0.5s;
+  z-index: 9999;
+  opacity: 0;
+}
+
+.notification.show {
+  right: 20px;
+  opacity: 1;
+}
+
+.notification.error {
+  background: #dc3545;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #20c997; 
+  font-weight: bold;
+  text-align: center;
+}
+
