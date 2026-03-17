@@ -37,68 +37,104 @@
     background: var(--clr-primary-1);
     padding: 7rem 8rem;
     h1{
-        font-size: 5rem;
+        font-size: 3rem;
         margin-bottom: 10px;
     }
     p{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color:var(--clr--lightblack);
+        max-width: 830px;
     }
 }
 
 .allcourse{
     background: var(--clr-primary-2);
     padding: 7rem 8rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    .bg{
-        max-width: 600px;
-        border-radius: 8px;
-        background-color: var(--clr-primary-1);
-        .img-container{
-            img{
-                width: 100%;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .allcoursebutton{
+        margin-bottom: 30px;
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            button{
+                cursor: pointer;
+                padding: 1rem 3rem;
+                background:var(--clr-primary-2);
+                color: var(--clr-primary-9);
+                border-radius: 8px;
+                border: var(--clr-primary-10) 1px solid;
+                &:hover{
+                    background: var(--clr-primary-4);
+                    
+                }
             }
         }
-        .coudetail{
-            padding: 1rem 2rem;
-            h3{
-                color: var(--clr-primary-8);
-                font-size: 1.1rem;
-            }
-            h2{
-                margin-bottom: 5px;
-                margin-top: 5px;
-                color: var(--clr-primary-9);
-                font-size: 1.5rem;
-            }
-            p{
-                color: var(--clr--lightblack);
-            }
-            .level{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 10px;
-                p{
-                    font-size: 0.9rem;
+    }
+    .allcoursedetail{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        .bg{
+            max-width: 600px;
+            border-radius: 8px;
+            background-color: var(--clr-primary-1);
+            min-height: 570px;
+            .img-container{
+                img{
+                    width: 100%;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
                 }
-                margin-bottom: 20px;
+            }
+            .coudetail{
+                padding: 1rem 2rem;
+                min-height: 140px;
+                h3{
+                    color: var(--clr-primary-8);
+                    font-size: 1.1rem;
+                }
+                h2{
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                    color: var(--clr-primary-9);
+                    font-size: 1.5rem;
+                }
+                p{
+                    color: var(--clr--lightblack);
+                }
+                .level{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    p{
+                        font-size: 0.9rem;
+                    }
+                    margin-bottom: 20px;
+                }
+                
             }
             .cost{
+                padding: 0rem 2rem;
                 margin-top: 10px;
                 display: flex;
                 justify-content: space-between;
                 h5{
-                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    color: var(--clr-grey-4);
                 }
                 a{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     text-decoration: none;
                     color: var(--clr-primary-8);
                     padding: 0.2rem 0.8rem;

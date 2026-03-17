@@ -12,7 +12,7 @@ const Aboutteacherdetail = ({imglink,teaname,teaposition,experience,icon,moredet
                 <h3>{teaposition}</h3>
                 <h4>{experience}</h4>
 
-                <p className="more-btn" onClick={()=>setIsOpen(!isOpen)}>{isOpen ? "隐藏详情" : "了解更多"}<i className={icon}></i></p>
+                <a className="more-btn" onClick={()=>setIsOpen(!isOpen)}>{isOpen ? "隐藏详情" : "了解更多"}<i className={icon}></i></a>
                 <div className={`tea-anwser ${isOpen ? 'show' : ''}`}>
                     <p>{moredetail}</p>
                 </div>

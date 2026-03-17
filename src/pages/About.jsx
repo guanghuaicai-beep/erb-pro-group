@@ -6,6 +6,7 @@ import Aboutvalues from '../components/Aboutvalues';
 import {dvalues} from '../data/dabout';
 import Aboutteacherdetail from '../components/Aboutteacherdetail';
 import {dteacherdetail} from '../data/dabout'
+import Aboutstudentreview from '../components/Aboutstudentreview';
 const About = () => {
     return (
         <>
@@ -27,20 +28,29 @@ const About = () => {
             </div>
             <div className="right">
                 <div className="img-container">
-                    {/* <img src="./fzky.png" alt="" /> */}
+                    <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773633696/founder_w_logo_h0esj1.png" alt="founder" />
+                    <p>Our founder Mr. Lee Ming-wah</p>
                 </div>
             </div>
         </div>
         <div className="value">
+            <h2>Core Values</h2>
             <div className="top">
-                <h2>Core Values</h2>
-                <h3>Practicality</h3>
-                <p>We reject empty theories. All courses are taught by industry veterans to ensure students can apply what they learn immediately.</p>
-                <h3>Flexibility</h3>
-                <p>Designed for busy adults, we offer a hybrid learning model combining online and offline instruction.</p>
-                <h3>Connection</h3>
-                <p>We build a student community to facilitate cross-industry resource sharing and networking.</p>
+                <div className='bg'>
+                    <h3>Practicality</h3>
+                    <p>We reject empty theories. All courses are taught by industry veterans to ensure students can apply what they learn immediately.</p>
+                    
+                </div>
+                <div className='bg'>
+                    <h3>Flexibility</h3>
+                    <p>Designed for busy adults, we offer a hybrid learning model combining online and offline instruction.</p>
+                </div>
+                <div className='bg'>
+                    <h3>Connection</h3>
+                    <p>We build a student community to facilitate cross-industry resource sharing and networking.</p>
+                </div>
             </div>
+            <h2 className='Strategic'>Strategic Development</h2>
             <div className="bottom">
                 {dvalues.map((item)=>(
                     <Aboutvalues key={item.id}
@@ -51,7 +61,7 @@ const About = () => {
                 ))}
             </div>
         </div>
-        <div className="teacher">
+        <div className="teacher" id="teacherdetail">
             <div className="title">
                 <h2>World-Class Faculty</h2>
                 <p>An exceptional team of professional instructors dedicated to delivering the highest quality learning experience.</p>
@@ -69,6 +79,7 @@ const About = () => {
                 ))}
             </div>
         </div>
+        <Aboutstudentreview />
         <div className="community">
             <h2>Join Our Community</h2>
             <p>Start your learning journey right now with our 2500+ companions </p>

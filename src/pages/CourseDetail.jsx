@@ -2,6 +2,7 @@ import React from 'react'
 import {courseList} from '../data/courseDet';
 import { useParams, Link } from 'react-router-dom';
 import '../css/coursedetail.css'
+import CourseSyllabus from '../pdf/CourseSyllabus.pdf'
 const CourseDetail = () => {
     const { slug } = useParams();
     const currentCourse = courseList.find(item=>item.slug===slug);
@@ -16,15 +17,15 @@ const CourseDetail = () => {
     return (
     <>
         <div className="coursetop">
-            <div className="left">
+            <div className="courseleft">
                 <h3>{currentCourse.coursecategory}</h3>
                 <h1>{currentCourse.coursename}</h1>
                 <p>{currentCourse.coursedetail}</p>
 
                 <ul className="iconps">
-                    <li><i className={currentCourse.courseicon}></i>{currentCourse.courseduration}</li>
-                    <li><i className={currentCourse.courseicon}></i>{currentCourse.coursemodel}</li>
-                    <li><i className={currentCourse.courseicon}></i>{currentCourse.courselevel}</li>
+                    <li><i className="fa-solid fa-clock-rotate-left"></i>{currentCourse.courseduration}</li>
+                    <li><i className="fa-solid fa-chalkboard-user"></i>{currentCourse.coursemodel}</li>
+                    <li><i className="fa-solid fa-signal"></i>{currentCourse.courselevel}</li>
                 </ul>
             </div>
             <div className="courseright">
@@ -66,7 +67,7 @@ const CourseDetail = () => {
                     <p>{currentCourse.teacher.experience}</p>
                 </div>
             </div>
-            <div className="student">
+            <div className="studentdetail">
                 <h2>Reviews</h2>
                 {currentCourse.reviews.map((review,index)=>(
                     <div className="studetail" key={index}>
@@ -74,7 +75,7 @@ const CourseDetail = () => {
                             <h4>{review.name}</h4>
                             <div>
                                 {Array.from({length:5}).map((_,starIdx)=>
-                                    <i key = {starIdx} class = {starIdx<review.star ? "fa-solid fa-heart" : "fa-regular fa-heart" }>
+                                    <i key = {starIdx} class = {starIdx<review.star ? "fa-solid fa-star" : "fa-regular fa-star" }>
                                     </i>
                                 )}
                             </div>
@@ -86,8 +87,10 @@ const CourseDetail = () => {
             </div>
             <div className="courselink">
                 <i className="fa-regular fa-file-pdf"></i>
-                <a href={currentCourse.coursepdflink || "courselinkcs.pdf"}>Course Syllabus</a>
-                <i className="fa-solid fa-download"></i>
+                <div className='download'>
+                    <a href={currentCourse.coursepdflink || CourseSyllabus}>Course Syllabus</a>
+                    <a href={currentCourse.coursepdflink || CourseSyllabus}><i className="fa-solid fa-download"></i></a>
+                </div>
             </div>
         </div>
         </>

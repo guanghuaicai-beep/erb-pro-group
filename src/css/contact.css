@@ -37,16 +37,17 @@
     background: var(--clr-primary-1);
     padding: 7rem 8rem;
     h1{
-        font-size: 5rem;
+        font-size: 3rem;
         margin-bottom: 10px;
     }
     p{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color:var(--clr--lightblack);
+        max-width: 830px;
     }
 }
 .center{
-    background: var(--clr-primary-5);
+    background: var(--clr-primary-4);
     display: grid;
     grid-template-columns: 2fr 3fr;
     padding: 3rem 8rem;

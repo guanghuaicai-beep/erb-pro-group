@@ -1,7 +1,20 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import '../css/footer.css'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 const Footer = () => {
+    const location = useLocation();
+    useEffect(()=>{
+        if(location.hash){
+            const element = document.getElementById(location.hash.slice(1));
+            if(element){
+                element.scrollIntoView({
+                    behavior:'smooth',
+                    block:'start',
+                    inline:'nearest'
+                });
+            }
+        }
+    },[location]);
     return (
         <>
         <div className="footer">
@@ -10,9 +23,9 @@ const Footer = () => {
                     <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773632922/hkct_logo_sfi9iu.png" alt="logo" />
                     <p>Deliver premium professional training and skill enhancement courses to help adults achieve their career aspirations.</p>
                     <ul>
-                        <li><i className="fa-solid fa-phone"></i>+852 2711 9296</li>
-                        <li><i className="fa-solid fa-envelope"></i>info@hkcta.com</li>
-                        <li><i className="fa-solid fa-map-marker-alt"></i>8/F, Wong Tze Building, 71 Hoi Yuen Road, Kwun Tong, Kowloon</li>
+                        <li className='contacticon'><i className="fa-solid fa-phone"></i>+852 2711 9296</li>
+                        <li className='contacticon'><i className="fa-solid fa-envelope"></i>info@hkcta.com</li>
+                        <li className='contacticon'><i className="fa-solid fa-map-marker-alt"></i>8/F, Wong Tze Building, 71 Hoi Yuen Road, Kwun Tong, Kowloon</li>
                         <ul className="socialmedia">
                             <li><i className="fa-brands fa-facebook"></i></li>
                             <li><i className="fa-brands fa-square-twitter"></i></li>
@@ -31,9 +44,9 @@ const Footer = () => {
                 <div className="bg">
                     <h2>Courses</h2>
                     <ul>
-                        <li><a href="">All Courses</a></li>
-                        <li><a href="">Tutors</a></li>
-                        <li><a href="">Student Reviews</a></li>
+                        <li><Link to="/course">All Courses</Link></li>
+                        <li><Link to="/about#teacherdetail">Tutors</Link></li>
+                        <li><Link to="/about#sutdentdetail">Student Reviews</Link></li>
                     </ul>
                 </div>
             </div>

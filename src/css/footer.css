@@ -82,6 +82,11 @@
                     font-size: 1.5rem;
                 }
             }
+            .contacticon{
+                i{
+                    margin-right: 5px;
+                }
+            }
         }
     
     }
