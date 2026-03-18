@@ -67,7 +67,12 @@ const About = () => {
                 <p>An exceptional team of professional instructors dedicated to delivering the highest quality learning experience.</p>
             </div>
             <div className="tea">
-                {dteacherdetail.map((item)=>(
+                {dteacherdetail.sort((a,b)=>{
+                        const firstLetterA = a.teaname.charAt(0).toUpperCase();
+                        const firstLetterB = b.teaname.charAt(0).toUpperCase();
+                        return firstLetterA.localeCompare(firstLetterB);
+                    })
+                    .map((item)=>(
                     <Aboutteacherdetail key={item.id}
                         imglink={item.imglink}
                         teaname={item.teaname}

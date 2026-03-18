@@ -1,28 +1,46 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import '../css/navbar.css'
 const Navbar = () => {
      // 狀態：控制菜單是否展開（預設 false = 隱藏）
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navbarRef = useRef(null);
 
     // 切換菜單展開/收起
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(()=>{
+        const handleClickoutside = (e) =>{
+            if(isMenuOpen && navbarRef.current && !navbarRef.current.contains(e.target)){
+                setIsMenuOpen(false);
+            }
+        };
+        document.addEventListener("mousedown",handleClickoutside);
+        return()=>{
+            document.removeEventListener("mousedown",handleClickoutside);
+        };
+    },[isMenuOpen])
+
+    const closeMenuOnlickclick = () =>{
+        setIsMenuOpen(false);
+    }
+
+
     return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navbarRef}>
         <div className="main-logo">
             <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773632922/hkct_logo_sfi9iu.png" alt="logo" />
             {/* <h1>hkct</h1> */}
         </div>
         <div className={`main-burger ${isMenuOpen ? 'active' : ''}`}>
             <ul>
-                <li><Link to="/" >home</Link></li>
-                <li><Link to="/course" >course</Link></li>
-                <li><Link to="/about" >about</Link></li>
-                <li><Link to="/contact" >contact</Link></li>
+                <li><Link to="/" onClick={closeMenuOnlickclick}>home</Link></li>
+                <li><Link to="/course" onClick={closeMenuOnlickclick}>course</Link></li>
+                <li><Link to="/about" onClick={closeMenuOnlickclick}>about</Link></li>
+                <li><Link to="/contact" onClick={closeMenuOnlickclick}>contact</Link></li>
             </ul>
         </div>
         <div className='main-sign'>

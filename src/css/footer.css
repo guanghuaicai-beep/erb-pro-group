@@ -99,3 +99,24 @@
         }
     }
 }
+
+@media (max-width:1170px) and (min-width:889px){
+    .footer{
+        padding: 5rem 4rem;
+        .top{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 888px){
+    .footer{
+        padding: 5rem 4.5rem;
+        .top{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}

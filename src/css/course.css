@@ -55,22 +55,25 @@
         margin-bottom: 10px;
     }
     .allcoursebutton{
-        margin-bottom: 30px;
+        margin-bottom: 6rem;
         ul{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 20px;
+            justify-items: center;
+            gap: 1rem;
             button{
+                width: 11rem;
+                height: 4rem;
+                font-size: 1rem;
                 cursor: pointer;
-                padding: 1rem 3rem;
+                padding: 1rem;
                 background:var(--clr-primary-2);
                 color: var(--clr-primary-9);
                 border-radius: 8px;
                 border: var(--clr-primary-10) 1px solid;
                 &:hover{
                     background: var(--clr-primary-4);
-                    
                 }
             }
         }
@@ -79,6 +82,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+        margin-top: 3rem;
         .bg{
             max-width: 600px;
             border-radius: 8px;
@@ -92,8 +96,8 @@
                 }
             }
             .coudetail{
-                padding: 1rem 2rem;
-                min-height: 140px;
+                padding: 1rem 1.5rem;
+                height: 14rem;
                 h3{
                     color: var(--clr-primary-8);
                     font-size: 1.1rem;
@@ -146,6 +150,133 @@
                     }
                 }
             }
+        }
+    }
+}
+@media (min-width:1337px) and (max-width:1750px){
+    .allcourse{
+        .allcoursebutton{
+            margin-bottom: 3rem;
+            ul{
+                button{
+                    width: 10rem;
+                    height: 4rem;
+                }
+            }
+        }
+        .allcoursedetail{
+            .bg {
+                .coudetail {
+                    min-height: 10.5rem;
+                }
+                .cost {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        
+    }
+}
+@media (min-width:1069px) and (max-width:1336px){
+    .allcourse{
+        .allcoursedetail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .bg {
+                .coudetail {
+                    min-height: 10.5rem;
+                }
+                .cost {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .allcoursebutton{
+            margin-bottom: 3rem;
+        }
+    }
+}
+@media (min-width:867px) and (max-width:1068px){
+    .allcourse{
+        .allcoursedetail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .bg {
+                .coudetail {
+                    min-height: 10.5rem;
+                }
+                .cost {
+                    margin-bottom: 1rem;
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .allcoursebutton{
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 1067px){
+    .cyetitle{
+        padding: 2rem 3rem;
+        h1{
+            font-size: 2.5rem;
+            /* color:red; */
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 1.2rem;
+            /* max-width: 1000px; */
+        }
+    }
+    .allcourse{
+        padding: 2rem 3rem;
+        .allcoursedetail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .bg {
+                .cost {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .allcoursebutton{
+            margin-bottom: 3rem;
+        }
+    }
+    .cyetitle{
+        h1{
+            font-size: 2.25rem;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+    }
+}
+@media (min-width:1069px) and (max-width:1336px){
+    .cyetitle{
+        padding-top: 7rem;
+    }
+}
+@media (min-width:867px) and (max-width:1068px){
+    .cyetitle{
+        padding-top: 7rem;
+    }
+}
+@media (min-width:768px) and (max-width:868px){
+    .cyetitle{
+        h1{
+            font-size: 2.7rem;
+            /* color:red; */
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 1.35rem;
+            /* max-width: 1000px; */
         }
     }
 }
