@@ -35,7 +35,8 @@
 }
 .titletop{
     background: var(--clr-primary-1);
-    padding: 7rem 8rem;
+    padding: 5rem 8rem;
+    padding-top: 7rem;
     h1{
         font-size: 3rem;
         margin-bottom: 10px;
@@ -43,7 +44,7 @@
     p{
         font-size: 1.5rem;
         color:var(--clr--lightblack);
-        max-width: 830px;
+        max-width: 880px;
     }
 }
 .center{
@@ -54,7 +55,7 @@
     .left{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem;
         .position{
             display: flex;
             flex-direction: column;
@@ -135,5 +136,136 @@
             margin-top: 30px;
             background-color:  var(--clr-primary-5);
         }
+    }
+}
+@media (min-width: 1201px) and (max-width: 1430px) {
+    .center{
+        padding: 3rem 6.5em;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1200px) {
+    .titletop{
+        padding: 2rem 5rem;
+        padding-top: 5rem;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.5rem;
+            max-width: 900px;
+        }
+    }
+    .center{
+        padding: 3rem 5.5rem;
+    }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+    .titletop{
+        padding: 2rem 5rem;
+        padding-top: 5rem;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .center{
+        padding: 3rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 870px) and (max-width: 900px) {
+    .titletop{
+        padding: 2rem 3rem;
+        padding-top: 5rem;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .center{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        .left{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 5.5rem);
+        }
+        .left > *:nth-child(1) {
+            grid-column: 1 / span 2; /* 從第 1 條線開始，跨 2 欄 */
+            grid-row: 1;             /* 在第 1 列 */
+        }
+        .left > *:nth-child(2) {
+            grid-column: 3 / span 2; /* 從第 3 條線開始，跨 2 欄 */
+            grid-row: 1;             /* 在第 1 列 */
+        }
+        .left > *:nth-child(3) {
+            grid-column: 1 / span 2; /* 從第 1 條線開始，跨 2 欄 */
+            grid-row: 2 / span 3;    /* 從第 2 條線開始，跨 2 列 (佔據 5,6 和 9,10) */
+        }
+        .left > *:nth-child(4) {
+            grid-column: 3 / span 2; /* 從第 3 條線開始，跨 2 欄 */
+            grid-row: 2 / span 2;             /* 在第 2 列 (佔據 7,8) */
+        }
+    }
+    .right {
+        margin-top: 1.25rem;
+    }
+}
+@media (min-width: 601px) and (max-width: 869px) {
+    .titletop{
+        padding: 2rem 5rem;
+        padding-top: 1.2rem;
+        h1{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+    }
+    .center{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    .left{
+        display: flex;
+        flex-direction: column;
+        }
+    }
+    .right {
+        margin-top: 1.25rem;
+        width: 80vw;
+    }
+}
+@media (max-width: 600px) {
+    .titletop{
+        padding: 2rem 3rem;
+        padding-top: 1.2rem;
+        h1{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.1rem;  
+        }
+    }
+    .center{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .left{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .right {
+        margin-top: 1.25rem;
+        width: 80vw; 
     }
 }
