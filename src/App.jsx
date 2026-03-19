@@ -8,6 +8,8 @@ import Course from './pages/Course';
 import Contact from './pages/Contactc';
 import CourseDetail from './pages/CourseDetail';
 import Footer from './components/Footer';
+import JoinUs from './pages/JoinUs';
+import Donation from './pages/Donation';
 // import ForgetPassword from './components/ForgetPassword';
 // import ResePassword from './components/ForgetPassword';
 // import SingIn from './components/SignIn';
@@ -39,6 +41,8 @@ function App() {
           <Route path="/course" element={<Course />} />
           <Route path="/course/:slug" element={<CourseDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/joinus" element={<JoinUs />} />
+          <Route path="/donation" element={<Donation />} />
         </Routes>
       </div>
       <Footer />

@@ -41,6 +41,8 @@ const Navbar = () => {
                 <li><Link to="/course" onClick={closeMenuOnlickclick}>course</Link></li>
                 <li><Link to="/about" onClick={closeMenuOnlickclick}>about</Link></li>
                 <li><Link to="/contact" onClick={closeMenuOnlickclick}>contact</Link></li>
+                <li><Link to="/joinus" onClick={closeMenuOnlickclick}>joinus</Link></li>
+                <li><Link to="/donation" onClick={closeMenuOnlickclick}>donation</Link></li>
             </ul>
         </div>
         <div className='main-sign'>
