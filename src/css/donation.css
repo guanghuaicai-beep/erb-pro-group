@@ -214,9 +214,9 @@
 }
 
 /* 响应式：平板（768px - 992px） */
-@media (max-width: 992px) {
+@media (max-width: 869px) {
     .donationcontainer {
-        padding: 5rem 0.5rem;
+        padding: 2rem 0.5rem;
     }
     .donationsection-1, .donationsection-2, .donationsection-3 {
         grid-template-columns: 1fr;
@@ -236,7 +236,11 @@
         }
     }
 }
-
+@media (min-width:769px) and (max-width:869px){
+    .donationcontainer {
+        padding: 1rem 0.5rem;
+    }
+}
 /* 响应式：手机（≤768px） */
 @media (max-width: 768px) {
     .donationcontainer {

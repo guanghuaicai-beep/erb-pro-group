@@ -170,33 +170,35 @@
         flex-direction: column;
         gap: 20px;
         .bg{
+            /* 关键修改 1：grid 改为 2 行，第一行是图片+基本信息，第二行是详情 */
             display: grid;
-            grid-template-columns: 1fr 4fr;
+            grid-template-rows: auto 1fr; /* 第一行自适应高度，第二行占剩余 */
+            grid-template-columns: 1fr 4fr; /* 保持列比例不变 */
             border-radius: 10px;
             background: var(--clr-primary-3);
+            overflow: hidden; /* 防止圆角溢出 */
+            /* 新增：顶部行（图片+基本信息） */
+            .top-row {
+                display: grid;
+                grid-template-columns: inherit; /* 继承父级列比例 */
+                grid-row: 1 / 2; /* 放在第一行 */
+                grid-column: 1 / -1; /* 跨所有列（占满整行） */
+            }
             img{
                 width: 100%;
                 height: 100%;
                 /* 关键修改 1：固定图片宽高比为正方形 */
                 aspect-ratio: 1/1; 
-                /* 关键修改 2：去掉圆形，改成小圆角正方形（可选） */
-                border-radius: 8px; 
+                border-top-left-radius: 8px; 
                 object-fit: cover;
                 box-shadow: var(--clr--box-shadow);
                 /* 可选：确保图片不拉伸 */
                 object-position: center;
-                /* width: 60%;
-                height: 100%;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: var(--clr--box-shadow); */
             }
             .teadetail{
                 background: var(--clr-white);
                 padding: 2rem;
                 border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-                overflow: hidden;
                 h2{
                     font-size: 1.5rem;
                     margin-bottom: 5px;
@@ -211,22 +213,6 @@
                     font-size: 1rem;
                     margin-bottom: 5px  ;
                 }
-                .tea-anwser{
-                    display: none; 
-                    background: var(--clr-primary-1); 
-                    padding: 1.5rem;
-                    border-radius: 8px;
-                    margin-top: 10px;
-                    border: 1px solid var(--clr-primary-3);
-                    color: var(--clr-primary-9);
-                    line-height: 1.6;
-                    transition: all 0.3s ease;
-                    width: 100%;
-                }
-                .tea-anwser.show {
-                    display: block;
-                    animation: fadeIn 0.3s ease-in-out;
-                }
                 .more-btn{
                     cursor: pointer;
                     color: var(--clr-primary-10);
@@ -240,9 +226,30 @@
                     }
                 }
             }
+            .tea-anwser{
+                display: none; 
+                background: var(--clr-primary-1); 
+                padding: 1.5rem 2rem; /* 统一左右内边距 */
+                border-radius: 0 0 10px 10px; /* 只保留底部圆角 */
+                margin-top: 0; /* 去掉上边距，紧贴顶部行 */
+                border: 1px solid var(--clr-primary-3);
+                border-top: none; /* 去掉顶部边框，衔接更自然 */
+                color: var(--clr-primary-9);
+                line-height: 1.6;
+                transition: all 0.3s ease;
+                /* 占满整行 + 第二行 */
+                grid-row: 2 / 3; 
+                grid-column: 1 / -1; /* 跨所有列（从第一列到最后一列） */
+                width: 100%;
+            }
+            .tea-anwser.show {
+                display: block;
+                animation: fadeIn 0.3s ease-in-out;
+            }
             
             p{
                 color: var(--clr-primary-6);
+                margin: 0; /* 去掉默认边距，避免留白 */
             }
         }
     }

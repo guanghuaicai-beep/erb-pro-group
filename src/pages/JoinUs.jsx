@@ -16,29 +16,29 @@ const JoinUs = () => {
             </div>
             <div className='bottom'>
                 <div className='bg'>
-                    <i class="fa-regular fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                     <h3>Competitive Salary</h3>
                     <p>Competitive compensation based on experience and capabilities</p>
                 </div>
                 <div div className='bg'>
-                    <i class="fa-solid fa-users"></i>
+                    <i className="fa-solid fa-users"></i>
                     <h3>Friendly Team</h3>
                     <p className='p1'>Work with like-minded professionals and build long-term career relationships</p>
                 </div>
                 <div div className='bg'>
-                    <i class="fa-solid fa-suitcase"></i>
+                    <i className="fa-solid fa-suitcase"></i>
                     <h3>Career Development</h3>
                     <p className='p1'>Training and development opportunities to help you achieve your career goals with flexible work arrangements</p>
                 </div>
                 <div div className='bg'>
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i className="fa-solid fa-location-dot"></i>
                     <h3>Flexible Work</h3>
                     <p>Support for remote work and flexible working hours</p>
                 </div>
             </div>
         </div>
         <div className='jurecruitment'>
-            <h2>Current Open Positions</h2>
+            <h2>Current Openings</h2>
             <p className='jutitlep1'>We're looking for talented and passionate people to join our team.</p>
             <div className='job'>
                 {recruitmentList.map((item)=>(

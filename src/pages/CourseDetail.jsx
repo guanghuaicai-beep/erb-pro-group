@@ -9,8 +9,8 @@ const CourseDetail = () => {
     if(!currentCourse){
         return(
             <div>
-                <h1>抱歉，該課程不存在</h1>
-                <Link to="/course">返回課程列表</Link>
+                <h1>Sorry! The course you searched does not exist.</h1>
+                <Link to="/course">Back to Course List</Link>
             </div>
         );
     }
@@ -91,6 +91,9 @@ const CourseDetail = () => {
                     <a href={currentCourse.coursepdflink || CourseSyllabus}>Course Syllabus</a>
                     <a href={currentCourse.coursepdflink || CourseSyllabus}><i className="fa-solid fa-download"></i></a>
                 </div>
+            </div>
+            <div className='btncompanyrecruitment'>
+                <Link to="/companyrecruitment">Relevant Job Openings</Link>
             </div>
         </div>
         </>

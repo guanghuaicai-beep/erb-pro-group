@@ -37,13 +37,13 @@ const Navbar = () => {
         </div>
         <div className={`main-burger ${isMenuOpen ? 'active' : ''}`}>
             <ul>
-                <li><Link to="/" onClick={closeMenuOnlickclick}>home</Link></li>
-                <li><Link to="/course" onClick={closeMenuOnlickclick}>course</Link></li>
-                <li><Link to="/network" onClick={closeMenuOnlickclick}>network</Link></li>
-                <li><Link to="/about" onClick={closeMenuOnlickclick}>about</Link></li>
-                <li><Link to="/contact" onClick={closeMenuOnlickclick}>contact</Link></li>
-                <li><Link to="/joinus" onClick={closeMenuOnlickclick}>joinus</Link></li>
-                <li><Link to="/donation" onClick={closeMenuOnlickclick}>donation</Link></li>
+                <li><Link to="/" onClick={closeMenuOnlickclick}>Home</Link></li>
+                <li><Link to="/course" onClick={closeMenuOnlickclick}>Course</Link></li>
+                <li><Link to="/network" onClick={closeMenuOnlickclick}>Network</Link></li>
+                <li><Link to="/about" onClick={closeMenuOnlickclick}>About</Link></li>
+                <li><Link to="/contact" onClick={closeMenuOnlickclick}>Contact</Link></li>
+                <li><Link to="/joinus" onClick={closeMenuOnlickclick}>Joinus</Link></li>
+                <li><Link to="/donation" onClick={closeMenuOnlickclick}>Donation</Link></li>
             </ul>
         </div>
         <div className='main-sign'>

@@ -117,7 +117,7 @@ ul{
     }
     
 }
-@media (min-width:970px) and (max-width:1188px){
+@media (min-width:1000px) and (max-width:1188px){
     .navbar{
         .main-burger{
             max-width: 650px;
@@ -129,7 +129,7 @@ ul{
         }
     }
 }
-@media (min-width:868px) and (max-width:969px){
+@media (min-width:890px) and (max-width:999px){
     .navbar{
         .main-burger{
             max-width: 650px;
@@ -141,7 +141,7 @@ ul{
         }
     }
 }
-@media (max-width:868px) {
+@media (max-width:889px) {
     .navbar{
         position: relative;
         .main-logo{
