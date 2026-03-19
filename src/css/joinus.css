@@ -68,10 +68,8 @@
         }
     }
     .bottom{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
         .bg{
             max-width: 350px;
@@ -81,7 +79,7 @@
             padding: 1rem 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             padding-bottom: 2rem;
             i{
@@ -94,7 +92,7 @@
             }
             p{
                 font-size: 1rem;
-                height: 2rem;
+                height: 5rem;
                 /* color: var(--clr--lightblack); */
             }
         }
@@ -250,21 +248,17 @@
         }
     }
     .process{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
         .bg{
-            min-width: 350px;
-            max-width: 400px;
-            /* min-height: 100px; */
+            height: auto;
             background: var(--clr-primary-2);
             border-radius: 8px;
             padding: 1rem 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             padding-bottom: 2rem;
             i{
@@ -277,7 +271,6 @@
             }
             p{
                 font-size: 1rem;
-                height: 2rem;
                 /* color: var(--clr--lightblack); */
             }
         }
@@ -309,6 +302,240 @@
         &:hover{
             color: var(--clr-grey-1);
             background: var(--clr-primary-10);
+        }
+    }
+}
+
+/* 1. 大屏桌面适配 (1440px 以下) - 微调间距/字号 */
+@media (max-width: 1440px) {
+    .jutitle, .jurecruitment, .readyjoinus {
+        padding: 4rem 6rem;
+        padding-top: 6rem;
+    }
+    .whyju, .Applicationprocess {
+        padding: 3rem 6rem;
+    }
+    .jurecruitment .job {
+        grid-template-columns: repeat(2, 1fr); /* 从3列改为2列 */
+    }
+}
+/* 2. 平板横屏 (1024px 以下) - 核心布局调整 */
+@media (max-width: 1024px) {
+    .jutitle {
+        padding: 3.5rem 4rem;
+        padding-top: 7rem;
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .whyju {
+        padding: 2.5rem 4rem;
+        .top {
+            h2 {
+                font-size: 2.2rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+        .bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .bg {
+                margin-bottom: 1.5rem;
+                h3 {
+                    padding: 0.5rem 0;
+                }
+                p {
+                height: auto; /* 取消固定高度，适配文本 */
+                }
+            }
+        }
+    }
+
+    .jurecruitment {
+        padding: 3.5rem 4rem;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+        h2 {
+            font-size: 2.5rem;
+        }
+        .jutitlep1 {
+            font-size: 1.3rem;
+        }
+        .job {
+            gap: 25px;
+            .bg {
+                padding: 1.8rem 2rem;
+                h3 {
+                font-size: 1.4rem;
+                }
+                h4 {
+                font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .Applicationprocess {
+        padding: 2.5rem 4rem;
+        .top {
+            h2 {
+                font-size: 2.2rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+        .process {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            .bg {
+                margin-bottom: 1.5rem;
+                h6 {
+                    padding: 0.5rem 0;
+                }
+                p {
+                height: auto;
+                }
+            }
+        }
+    }
+
+    .readyjoinus {
+        padding: 5rem 4rem;
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        a {
+            padding: 0.9rem 1.8rem;
+        }
+    }
+}
+
+/* 3. 平板竖屏/手机横屏 (768px 以下) - 大幅调整布局 */
+@media (max-width: 768px) {
+    .jutitle {
+        padding: 3rem 2rem;
+        padding-top: 4rem;
+        h1 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.1rem;
+            max-width: 100%;
+        }
+    }
+
+    .whyju {
+        padding: 2rem 2rem;
+        .bottom {
+            flex-direction: column; /* 单列显示 */
+            .bg {
+                max-width: 100%;
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 1.5rem 1.8rem;
+                h3 {
+                font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .jurecruitment {
+        padding: 3rem 2rem;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        .job {
+            grid-template-columns: 1fr; /* 单列显示 */
+            gap: 20px;
+        }
+    }
+
+    .Applicationprocess {
+        padding: 2rem 2rem;
+        .process {
+            flex-direction: column; /* 单列显示 */
+            .bg {
+                min-width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+                padding: 1.5rem 1.8rem;
+                h6 {
+                font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .readyjoinus {
+        padding: 4rem 2rem;
+        text-align: center;
+        h3 {
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+/* 4. 手机竖屏 (480px 以下) - 极致适配小屏 */
+@media (max-width: 480px) {
+    .jutitle {
+        h1 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    .whyju {
+        .bottom {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .whyju .top h2, .Applicationprocess .top h2 {
+        font-size: 1.8rem;
+    }
+    .jurecruitment {
+        h2 {
+            font-size: 2rem;
+        }
+        .jutitlep1 {
+            font-size: 1.1rem;
+            }
+            .job .bg {
+            padding: 1.5rem 1.5rem;
+            h3 {
+                font-size: 1.2rem;
+            }
+            .monsalar {
+                font-size: 1rem;
+            }
+            .requirement ul li {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .Applicationprocess {
+        .process {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .readyjoinus {
+        a {
+        width: 100%; /* 按钮全屏宽 */
+        padding: 1rem;
+        font-size: 0.95rem;
         }
     }
 }

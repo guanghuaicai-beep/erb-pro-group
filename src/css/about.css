@@ -97,10 +97,6 @@
         margin-bottom: 10px;
     }
     .top{
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */ 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:20px;  
@@ -123,11 +119,10 @@
         margin-bottom: 20px;
     }
     .bottom{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
         .bg{
-            min-width: 350px;
             .icon{
                 display: flex;
                 flex-direction: row;
@@ -363,5 +358,319 @@
             color: var(--clr-primary-2);
             background: var(--clr-primary-7);
         }
+    }
+}
+
+@media (max-width: 1440px) {
+    .abouttop, .story {
+        padding: 6rem 6rem;
+    }
+    .value, .teacher, .student {
+        padding: 3rem 6rem;
+    }
+    .story {
+        grid-template-columns: 2fr 1fr;
+    }
+    .value .top {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .value .bottom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+@media (max-width: 1024px) {
+    .abouttop {
+        padding: 5rem 4rem;
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2.2rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.3rem;
+            max-width: 100%;
+        }
+    }
+
+    .story {
+        padding: 5rem 4rem;
+        grid-template-columns: 1fr;
+        .left {
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+        }
+        .right {
+            margin-top: 2rem;
+            text-align: center;
+            img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .value {
+        padding: 2.5rem 4rem;
+        h2 {
+            font-size: 2.5rem;
+        }
+        .top {
+            gap: 15px;
+            .bg {
+                max-width: 100%;
+                padding: 1rem 1.5rem;
+                h3 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .teacher {
+        padding: 2.5rem 4rem;
+        .title h2 {
+            font-size: 2.5rem;
+        }
+        .tea .bg {
+            grid-template-columns: 1fr 3fr;
+            .teadetail {
+                padding: 1.5rem;
+                h2 {
+                font-size: 1.4rem;
+                }
+                h3 {
+                font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .student {
+        padding: 2.5rem 4rem;
+        h2 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+        .stu .bg {
+            max-width: 350px;
+            max-height: 340px;
+            .review {
+                font-size: 1.1rem;
+                min-height: 100px;
+            }
+            .course {
+                font-size: 1.1rem;
+                padding: 0.6rem 0.8rem;
+            }
+        }
+    }
+
+    .community {
+        padding: 2.5rem 4rem;
+        h2 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        a {
+            padding: 0.8rem 1.8rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .abouttop {
+        padding: 4rem 2rem;
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+        font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .story {
+        padding: 4rem 2rem;
+        .left h2 {
+            font-size: 2.2rem;
+        }
+        .left p {
+            font-size: 1.1rem;
+        }
+        .right img {
+            max-width: 300px;
+        }
+    }
+
+    .value {
+        padding: 2rem 2rem;
+        h2 {
+            font-size: 2.2rem;
+        }
+        .top {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .bottom {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            .bg {
+                padding: 1rem 1.5rem;
+                i {
+                font-size: 1.3rem;
+                }
+                h3 {
+                font-size: 1.1rem;
+                }
+                p {
+                font-size: 0.95rem;
+                }
+            }
+        }
+    }
+
+    .teacher {
+        padding: 2rem;
+        .title h2 {
+            font-size: 2.2rem;
+        }
+        .title p {
+            font-size: 1rem;
+            text-align: center;
+            max-width: 100%;
+        }
+        .tea .bg {
+            grid-template-columns: 1fr;
+            .teadetail {
+                border-radius: 0 0 10px 10px;
+                padding: 1.2rem;
+            }
+        }
+    }
+
+    .student {
+        padding: 2rem 2rem;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+        .stu .bg {
+            max-width: 320px;
+            max-height: 380px;
+            .review {
+                min-height: 140px;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .community {
+        padding: 2rem 2rem;
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            max-width: 100%;
+        }
+        a {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .abouttop {
+        padding: 3rem 1rem;
+        h1 {
+            font-size: 1.8rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .story {
+        padding: 3rem 1rem;
+        .left h2 {
+            font-size: 1.8rem;
+        }
+        .left p {
+            font-size: 1rem;
+        }
+    }
+
+    .value h2 {
+        font-size: 1.8rem;
+    }
+
+    .teacher .title h2 {
+        font-size: 1.8rem;
+    }
+    .teacher .tea .bg .teadetail {
+        h2 {
+            font-size: 1.2rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        h4 {
+            font-size: 0.9rem;
+        }
+    }
+
+    .student {
+        padding: 2rem 1rem;
+        h2 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+            .stu .bg {
+            max-width: 100%;
+            max-height: auto;
+            .review {
+                min-height: auto;
+            }
+        }
+    }
+
+    .community h2 {
+        font-size: 1.8rem;
+    }
+    .community a {
+        font-size: 1rem;
     }
 }

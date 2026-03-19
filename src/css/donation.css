@@ -33,14 +33,14 @@
     margin: 0;
     padding: 0;
 }
-.container {
+.donationcontainer {
     max-width: 1400px;
     margin: 0 auto;
     padding: 7rem 1rem;
 }
 
 /* 通用区块样式 */
-.sections {
+.donationsections {
     margin-bottom: 5rem;
     border-radius: 12px;
     overflow: hidden;
@@ -49,7 +49,7 @@
 }
 
 /* 区块1：Self-financing institution */
-.section-1 {
+.donationsection-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -78,7 +78,7 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: covser;
             transition: transform 0.3s ease;
             &:hover {
                 transform: scale(1.02);
@@ -88,7 +88,7 @@
 }
 
 /* 区块2：Donation Impact（左右并排） */
-.section-2 {
+.donationsection-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -146,7 +146,7 @@
 }
 
 /* 区块3：Support HKCT */
-.section-3 {
+.donationsection-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -215,10 +215,13 @@
 
 /* 响应式：平板（768px - 992px） */
 @media (max-width: 992px) {
-    .section-1, .section-2, .section-3 {
+    .donationcontainer {
+        padding: 5rem 0.5rem;
+    }
+    .donationsection-1, .donationsection-2, .donationsection-3 {
         grid-template-columns: 1fr;
         .img-1, .img-2, .img-3 {
-            height: 350px;
+            height: 450px;
             img {
                 height: 100%;
             }
@@ -236,13 +239,13 @@
 
 /* 响应式：手机（≤768px） */
 @media (max-width: 768px) {
-    .container {
+    .donationcontainer {
         padding: 1rem 0.5rem;
     }
-    .sections {
+    .donationsections {
         margin-bottom: 3rem;
     }
-    .section-1, .section-2, .section-3 {
+    .donationsection-1, .donationsection-2, .donationsection-3 {
         .content-1, .content-2, .content-3 {
             padding: 2rem 1.5rem;
             h2 {

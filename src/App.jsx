@@ -10,6 +10,7 @@ import CourseDetail from './pages/CourseDetail';
 import Footer from './components/Footer';
 import JoinUs from './pages/JoinUs';
 import Donation from './pages/Donation';
+import Network from './pages/Network';
 // import ForgetPassword from './components/ForgetPassword';
 // import ResePassword from './components/ForgetPassword';
 // import SingIn from './components/SignIn';
@@ -43,6 +44,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/joinus" element={<JoinUs />} />
           <Route path="/donation" element={<Donation />} />
+          <Route path="/network" element={<Network />} />
         </Routes>
       </div>
       <Footer />

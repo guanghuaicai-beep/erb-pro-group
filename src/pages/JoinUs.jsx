@@ -6,40 +6,40 @@ const JoinUs = () => {
     return (
         <>
         <div className='jutitle'>
-            <h1>加入我們</h1>
-            <p>成為我們使命的一部分，幫助成千上萬的成年人實現職業夢想。</p>
+            <h1>Join Us</h1>
+            <p>Become part of our mission to help thousands of adults achieve their career dreams.</p>
         </div>
         <div className='whyju'>
             <div className='top'>
-                <h2>為什麼加入我們？</h2>
-                <p>我們相信每個人都應該有機會實現自己的潛力。我們的團隊由充滿熱情的專業人士組成，致力於改變教育行業。</p>
+                <h2>Why Join Us?</h2>
+                <p>We believe everyone deserves the opportunity to reach their potential. Our team consists of passionate professionals dedicated to transforming the education industry.</p>
             </div>
             <div className='bottom'>
                 <div className='bg'>
                     <i class="fa-regular fa-heart"></i>
-                    <h3>競爭力薪資</h3>
-                    <p>根據經驗和能力提供具有競爭力的薪資待遇</p>
+                    <h3>Competitive Salary</h3>
+                    <p>Competitive compensation based on experience and capabilities</p>
                 </div>
                 <div div className='bg'>
                     <i class="fa-solid fa-users"></i>
-                    <h3>友善的團隊</h3>
-                    <p className='p1'>與志同道合的專業人士一起工作，建立長期的職業關係</p>
+                    <h3>Friendly Team</h3>
+                    <p className='p1'>Work with like-minded professionals and build long-term career relationships</p>
                 </div>
                 <div div className='bg'>
                     <i class="fa-solid fa-suitcase"></i>
-                    <h3>職業發展</h3>
-                    <p className='p1'>提供培訓和發展機會，幫助您實現職業目標靈活工作</p>
+                    <h3>Career Development</h3>
+                    <p className='p1'>Training and development opportunities to help you achieve your career goals with flexible work arrangements</p>
                 </div>
                 <div div className='bg'>
                     <i class="fa-solid fa-location-dot"></i>
-                    <h3>靈活工作</h3>
-                    <p>支持遠端工作和靈活的工作時間安排</p>
+                    <h3>Flexible Work</h3>
+                    <p>Support for remote work and flexible working hours</p>
                 </div>
             </div>
         </div>
         <div className='jurecruitment'>
-            <h2>現在招聘的職位</h2>
-            <p className='jutitlep1'>我們正在尋找有才華和熱情的人加入我們的團隊。</p>
+            <h2>Current Open Positions</h2>
+            <p className='jutitlep1'>We're looking for talented and passionate people to join our team.</p>
             <div className='job'>
                 {recruitmentList.map((item)=>(
                     <Recruitmentjob key={item.id}
@@ -57,36 +57,36 @@ const JoinUs = () => {
         </div>
         <div className='Applicationprocess'>
             <div className='top'>
-                <h2>應聘流程</h2>
-                <p>我們的招聘過程簡單透明，通常需要 2-4 週。</p>
+                <h2>Application Process</h2>
+                <p>Our recruitment process is simple and transparent, typically taking 2-4 weeks.</p>
             </div>
             <div className='process'>
                 <div className='bg'>
                     <i className="fa-solid fa-1"></i>
-                    <h6>提交申請</h6>
-                    <p>填寫申請表並上傳您的履歷和作品集</p>
+                    <h6>Submit Application</h6>
+                    <p>Complete the application form and upload your resume and portfolio</p>
                 </div>
                 <div className='bg'>
                     <i className="fa-solid fa-2"></i>
-                    <h6>初步篩選</h6>
-                    <p>我們會審查您的申請並選擇符合條件的候選人</p>
+                    <h6>Initial Screening</h6>
+                    <p>We review your application and select qualified candidates</p>
                 </div>
                 <div className='bg'>
                     <i className="fa-solid fa-3"></i>
-                    <h6>面試</h6>
-                    <p>與我們的團隊進行一對一或小組面試</p>
+                    <h6>Interview</h6>
+                    <p>One-on-one or panel interview with our team</p>
                 </div>
                 <div className='bg'>
                     <i className="fa-solid fa-4"></i>
-                    <h6>錄用</h6>
-                    <p>成功的候選人將收到錄用通知</p>
+                    <h6>Offer</h6>
+                    <p>Successful candidates will receive an offer letter</p>
                 </div>
             </div>
         </div>
         <div className='readyjoinus'>
-            <h2>準備好加入我們了嗎？</h2>
-            <h3>選擇一個職位並提交您的申請。我們期待聽到您的故事！</h3>
-            <a href='mailto:2053953491@qq.com'>提交申請</a>
+            <h2>Ready to Join Us?</h2>
+            <h3>Choose a position and submit your application. We look forward to hearing your story!</h3>
+            <a href='mailto:2053953491@qq.com'>Submit Application</a>
         </div>
         </>
     )

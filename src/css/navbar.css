@@ -117,6 +117,30 @@ ul{
     }
     
 }
+@media (min-width:970px) and (max-width:1188px){
+    .navbar{
+        .main-burger{
+            max-width: 650px;
+            ul{
+                a{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width:868px) and (max-width:969px){
+    .navbar{
+        .main-burger{
+            max-width: 650px;
+            ul{
+                a{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
 @media (max-width:868px) {
     .navbar{
         position: relative;

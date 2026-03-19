@@ -9,7 +9,7 @@ const Recruitmentjob = ({workjob,depaetment,position,workingmode,monsalary,jobre
             <p className='workingmode'>{workingmode}</p>
             <p className='monsalar'>{monsalary}</p>
             <div className='requirement'>
-                <p>職位要求</p>
+                <p>Job Requirements</p>
                 <ul>
                     <li><i className="fa-solid fa-check"></i>{jobrequeirment1}</li>
                     <li><i className="fa-solid fa-check"></i>{jobrequeirment2}</li>

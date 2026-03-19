@@ -3,8 +3,8 @@ import "../css/donation.css"
 const Donation = () => {
     return (
         <>
-        <div className="container">
-        <div className="sections section-1">
+        <div className="donationcontainer">
+        <div className="donationsections donationsection-1">
             <div className="img img-1">
                 <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773824388/donation_img-1_auxqxk.jpg" alt="" />
             </div>
@@ -19,7 +19,7 @@ const Donation = () => {
                 </p>
             </div>
         </div>
-        <div className="sections section-2">
+        <div className="donationsections donationsection-2">
             <div className="contents content-2">
                 <h2>Donation Impact</h2>
                 <div className="impacts impact-1">
@@ -49,7 +49,7 @@ const Donation = () => {
                 <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773824389/donation_img-2_a4ydli.jpg" alt="" />
             </div>
         </div>
-        <div className="sections section-3">
+        <div className="donationsections donationsection-3">
             <div className="img img-3">
                 <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773824388/donation_img-3_esnxt4.jpg" alt="" />
             </div>
