@@ -44,7 +44,7 @@ ul{
     color: var(--clr-black);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 4.9rem var(--right-col-padding);
+    padding: 2.5rem var(--right-col-padding);
     min-height: 600px;
     gap: 2rem;
     
@@ -265,7 +265,7 @@ ul{
         --right-col-padding: 6rem;
     }
     .coursetop {
-        padding: 4rem var(--right-col-padding);
+        padding: 2rem var(--right-col-padding);
         min-height: 500px;
         .courseleft {
             p {
@@ -315,12 +315,12 @@ ul{
     }
     .coursetop {
         grid-template-columns: 1fr;
-        padding: 3.5rem var(--right-col-padding);
+        padding: 4rem var(--right-col-padding);
         min-height: auto; 
         .courseleft {
             max-width: 100%; 
             margin-bottom: 2.5rem; 
-            padding-top: 2rem;
+            padding-top: 1rem;
             p {
                 margin-bottom: 60px;
             }
@@ -372,14 +372,15 @@ ul{
         }
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 889px) {
     :root {
         --right-col-width: 100%; 
         --right-col-padding: 2rem;
     }
     .coursetop {
         grid-template-columns: 1fr;
-        padding: 3rem var(--right-col-padding);
+        padding: 0.1rem var(--right-col-padding);
         min-height: auto;
         .courseleft {
             max-width: 100%; 
@@ -452,7 +453,7 @@ ul{
         --right-col-padding: 1rem;
     }
     .coursetop {
-        padding: 2rem var(--right-col-padding);
+        padding: 1rem var(--right-col-padding);
         .courseleft .iconps {
             flex-direction: column;
             gap: 10px;

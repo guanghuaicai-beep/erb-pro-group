@@ -38,8 +38,6 @@
     margin: 0 auto;
     padding: 7rem 1rem;
 }
-
-/* 通用区块样式 */
 .donationsections {
     margin-bottom: 5rem;
     border-radius: 12px;
@@ -47,8 +45,6 @@
     box-shadow: var(--clr--box-shadow);
     background-color: var(--clr-white);
 }
-
-/* 区块1：Self-financing institution */
 .donationsection-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -74,11 +70,19 @@
         }
     }
     .img-1 {
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr-grey-1);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 0;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: covser;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: none;
             transition: transform 0.3s ease;
             &:hover {
                 transform: scale(1.02);
@@ -86,8 +90,6 @@
         }
     }
 }
-
-/* 区块2：Donation Impact（左右并排） */
 .donationsection-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,6 +120,7 @@
                 margin-left: 2rem;
                 margin-bottom: 1.5rem;
                 color: var(--clr--lightblack);
+                list-style-type: disc;
                 li {
                     margin-bottom: 0.5rem;
                 }
@@ -130,13 +133,21 @@
         }
     }
     .img-2 {
-        overflow: hidden;
+        width: 100%;
         height: 100%;
-        min-height: 400px;
+        background-color: var(--clr-grey-1);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 90%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: none;
             transition: transform 0.3s ease;
             &:hover {
                 transform: scale(1.02);
@@ -144,19 +155,25 @@
         }
     }
 }
-
-/* 区块3：Support HKCT */
 .donationsection-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 0;
     .img-3 {
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr-grey-1);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 0;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: none;
             transition: transform 0.3s ease;
             &:hover {
                 transform: scale(1.02);
@@ -206,6 +223,7 @@
             margin-left: 2rem;
             margin-bottom: 1.5rem;
             color: var(--clr--lightblack);
+            list-style-type: disc;
             li {
                 margin-bottom: 0.5rem;
             }
@@ -213,23 +231,29 @@
     }
 }
 
-/* 未修改 */
-/* 响应式：平板（768px - 992px） */
-@media (min-width:800px) and (max-width:889px) {
+@media (max-width: 1150px) {
+    .donationsection-2 .img-2 {
+        align-items: center;
+        justify-content: start;
+    }
+    .donationsections {
+        gap: 1.5rem;
+    }
+}
+@media (max-width:1060px) {
     .donationcontainer {
-        padding: 1.5rem 0.5rem;
+        padding: 5rem 0.5rem;
     }
     .donationsection-1, .donationsection-2, .donationsection-3 {
         grid-template-columns: 1fr;
         .img-1, .img-2, .img-3 {
-            height: 450px;
             img {
-                height: 100%;
+                max-width: 100%;
+                max-height: 450px;
             }
         }
         .content-1, .content-2, .content-3 {
             h2 {
-                /* color: red; */
                 font-size: 1.8rem;
             }
             h3 {
@@ -237,9 +261,17 @@
             }
         }
     }
+    .donationsection-2 .img-2 {
+        align-items: center;
+        justify-content: center;
+    }
 }
-
-@media (min-width:769px) and (max-width:799px){
+@media (max-width:889px){
+    .donationcontainer {
+        padding: 2rem 1rem;
+    }
+}
+@media (max-width:799px) {
     .donationcontainer {
         padding: 1rem 0.5rem;
     }
@@ -247,7 +279,6 @@
         grid-template-columns: 1fr;
     }
 }
-/* 响应式：手机（≤768px） */
 @media (max-width: 768px) {
     .donationcontainer {
         padding: 1rem 0.5rem;
@@ -260,7 +291,6 @@
         .content-1, .content-2, .content-3 {
             padding: 2rem 1.5rem;
             h2 {
-                /* color: red; */
                 font-size: 1.6rem;
             }
             h3 {
@@ -276,9 +306,9 @@
             }
         }
         .img-1, .img-2, .img-3 {
-            height: 280px;
             img {
-                height: 100%;
+                max-width: 100%;
+                max-height: 280px;
             }
         }
     }

@@ -7,10 +7,12 @@ const Footer = () => {
         if(location.hash){
             const element = document.getElementById(location.hash.slice(1));
             if(element){
-                element.scrollIntoView({
-                    behavior:'smooth',
-                    block:'start',
-                    inline:'nearest'
+                const navbar = document.querySelector('.navbar'); 
+                const navbarHeight = navbar && window.innerWidth > 889 ? navbar.offsetHeight : 0;
+                const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: elementTop - navbarHeight,
+                    behavior: 'smooth'
                 });
             }
         }

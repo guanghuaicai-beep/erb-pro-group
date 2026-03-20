@@ -306,7 +306,7 @@
     }
 }
 
-/* 1. 大屏桌面适配 (1440px 以下) - 微调间距/字号 */
+
 @media (max-width: 1440px) {
     .jutitle, .jurecruitment, .readyjoinus {
         padding: 4rem 6rem;
@@ -316,10 +316,10 @@
         padding: 3rem 6rem;
     }
     .jurecruitment .job {
-        grid-template-columns: repeat(2, 1fr); /* 从3列改为2列 */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
-/* 2. 平板横屏 (1024px 以下) - 核心布局调整 */
+
 @media (max-width: 1024px) {
     .jutitle {
         padding: 3.5rem 4rem;
@@ -351,7 +351,7 @@
                     padding: 0.5rem 0;
                 }
                 p {
-                height: auto; /* 取消固定高度，适配文本 */
+                height: auto; 
                 }
             }
         }
@@ -421,7 +421,6 @@
     }
 }
 
-/* 3. 平板竖屏/手机横屏 (768px 以下) - 大幅调整布局 */
 @media (max-width: 768px) {
     .jutitle {
         padding: 3rem 2rem;
@@ -438,7 +437,7 @@
     .whyju {
         padding: 2rem 2rem;
         .bottom {
-            flex-direction: column; /* 单列显示 */
+            flex-direction: column; 
             .bg {
                 max-width: 100%;
                 width: 100%;
@@ -456,7 +455,7 @@
         padding-top: 4rem;
         padding-bottom: 5rem;
         .job {
-            grid-template-columns: 1fr; /* 单列显示 */
+            grid-template-columns: 1fr; 
             gap: 20px;
         }
     }
@@ -464,7 +463,7 @@
     .Applicationprocess {
         padding: 2rem 2rem;
         .process {
-            flex-direction: column; /* 单列显示 */
+            flex-direction: column; 
             .bg {
                 min-width: 100%;
                 max-width: 100%;
@@ -486,7 +485,7 @@
     }
 }
 
-/* 4. 手机竖屏 (480px 以下) - 极致适配小屏 */
+
 @media (max-width: 480px) {
     .jutitle {
         h1 {
@@ -533,7 +532,7 @@
     }
     .readyjoinus {
         a {
-        width: 100%; /* 按钮全屏宽 */
+        width: 100%; 
         padding: 1rem;
         font-size: 0.95rem;
         }

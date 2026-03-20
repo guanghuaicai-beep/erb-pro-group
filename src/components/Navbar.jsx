@@ -42,7 +42,7 @@ const Navbar = () => {
                 <li><Link to="/network" onClick={closeMenuOnlickclick}>Network</Link></li>
                 <li><Link to="/about" onClick={closeMenuOnlickclick}>About</Link></li>
                 <li><Link to="/contact" onClick={closeMenuOnlickclick}>Contact</Link></li>
-                <li><Link to="/joinus" onClick={closeMenuOnlickclick}>Joinus</Link></li>
+                <li><Link to="/joinus" onClick={closeMenuOnlickclick}>JoinUs</Link></li>
                 <li><Link to="/donation" onClick={closeMenuOnlickclick}>Donation</Link></li>
             </ul>
         </div>

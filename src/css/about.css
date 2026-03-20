@@ -170,29 +170,25 @@
         flex-direction: column;
         gap: 20px;
         .bg{
-            /* 关键修改 1：grid 改为 2 行，第一行是图片+基本信息，第二行是详情 */
             display: grid;
-            grid-template-rows: auto 1fr; /* 第一行自适应高度，第二行占剩余 */
-            grid-template-columns: 1fr 4fr; /* 保持列比例不变 */
+            grid-template-rows: auto 1fr; 
+            grid-template-columns: 1fr 4fr;
             border-radius: 10px;
             background: var(--clr-primary-3);
-            overflow: hidden; /* 防止圆角溢出 */
-            /* 新增：顶部行（图片+基本信息） */
+            overflow: hidden; 
             .top-row {
                 display: grid;
-                grid-template-columns: inherit; /* 继承父级列比例 */
-                grid-row: 1 / 2; /* 放在第一行 */
-                grid-column: 1 / -1; /* 跨所有列（占满整行） */
+                grid-template-columns: inherit;
+                grid-row: 1 / 2; 
+                grid-column: 1 / -1; 
             }
             img{
                 width: 100%;
                 height: 100%;
-                /* 关键修改 1：固定图片宽高比为正方形 */
                 aspect-ratio: 1/1; 
                 border-top-left-radius: 8px; 
                 object-fit: cover;
                 box-shadow: var(--clr--box-shadow);
-                /* 可选：确保图片不拉伸 */
                 object-position: center;
             }
             .teadetail{
@@ -222,24 +218,23 @@
                     i {
                         transition: transform 0.3s ease;
                         font-size: 0.8rem;
-                        color: inherit; /* 继承按钮文字颜色 */
+                        color: inherit; 
                     }
                 }
             }
             .tea-anwser{
                 display: none; 
                 background: var(--clr-primary-1); 
-                padding: 1.5rem 2rem; /* 统一左右内边距 */
-                border-radius: 0 0 10px 10px; /* 只保留底部圆角 */
-                margin-top: 0; /* 去掉上边距，紧贴顶部行 */
+                padding: 1.5rem 2rem; 
+                border-radius: 0 0 10px 10px; 
+                margin-top: 0; 
                 border: 1px solid var(--clr-primary-3);
-                border-top: none; /* 去掉顶部边框，衔接更自然 */
+                border-top: none; 
                 color: var(--clr-primary-9);
                 line-height: 1.6;
                 transition: all 0.3s ease;
-                /* 占满整行 + 第二行 */
                 grid-row: 2 / 3; 
-                grid-column: 1 / -1; /* 跨所有列（从第一列到最后一列） */
+                grid-column: 1 / -1; 
                 width: 100%;
             }
             .tea-anwser.show {
@@ -249,7 +244,7 @@
             
             p{
                 color: var(--clr-primary-6);
-                margin: 0; /* 去掉默认边距，避免留白 */
+                margin: 0; 
             }
         }
     }
@@ -296,9 +291,9 @@
             flex-shrink: 0;
             border-radius: 8px;
             padding: 1rem 2rem;
-            display: flex; /* 关键：开启flex布局 */
-            flex-direction: column; /* 垂直排列子元素 */
-            justify-content: space-between; /* 内容分布均匀，固定各部分位置 */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
             .icons{
                 i{
                     margin-bottom: 10px;
@@ -309,8 +304,8 @@
                 color: var(--clr--lightblack);
                 font-size: 1.2rem;
                 min-height: 120px;
-                line-height: 1.6; /* 统一行高，排版更整齐 */
-                margin: 10px 0; /* 固定上下间距 */
+                line-height: 1.6; 
+                margin: 10px 0; 
             }
             .course{
                 font-size: 1.2rem;
@@ -319,14 +314,13 @@
                 padding: 0.7rem 1rem;
                 color: var(--clr-white);
                 margin: 1rem 0;
-                /* 核心：限制标签宽度，避免撑满 */
                 width: 100%;
-                line-height: 1.4; /* 多行文字垂直居中 */
+                line-height: 1.4; 
             }
             .stuname{
-                margin-top: auto; /* 关键：固定在卡片底部 */
-                padding-top: 10px; /* 顶部间距，和上方内容分隔 */
-                border-top: 1px solid var(--clr-primary-10); /* 可选：加分割线，更清晰 */
+                margin-top: auto;
+                padding-top: 10px; 
+                border-top: 1px solid var(--clr-primary-10);
                 h6{
                     font-size: 1rem;
                 }
@@ -500,14 +494,15 @@
         }
     }
 }
-@media (max-width: 768px) {
+/* 889 */
+@media (max-width: 889px) {
     .abouttop {
-        padding: 4rem 2rem;
+        padding: 1rem 2rem;
         h1 {
             font-size: 2.2rem;
         }
         h2 {
-        font-size: 2rem;
+            font-size: 2rem;
         }
         h3 {
             font-size: 1.6rem;
@@ -568,7 +563,7 @@
             max-width: 100%;
         }
         .tea .bg {
-            grid-template-columns: 1fr;
+            /* grid-template-columns: 1fr; */
             .teadetail {
                 border-radius: 0 0 10px 10px;
                 padding: 1.2rem;
@@ -613,7 +608,7 @@
 }
 @media (max-width: 480px) {
     .abouttop {
-        padding: 3rem 1rem;
+        padding: 1% 1rem;
         h1 {
             font-size: 1.8rem;
         }

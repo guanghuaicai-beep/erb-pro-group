@@ -154,10 +154,10 @@
         }
     }
 }
-@media (min-width:835px) and (max-width:1024px){
+@media (min-width:890px) and (max-width:1024px){
     .homepagetitle{
         padding: 2.5rem 3.5rem;
-        padding-top: 7rem;
+        padding-top: 6rem;
         padding-bottom: 5rem;
         .left{
             .ztitle {
@@ -182,9 +182,38 @@
         }
     }
 }
-@media (min-width: 769px) and (max-width:835px){
+@media (min-width:876px) and (max-width:889px){
+    .homepagetitle{
+        padding: 2.5rem 3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        .left{
+            .ztitle {
+                font-size: 0.9rem;
+            }
+            .ftitle{
+                font-size: 1.25rem;
+            }
+            p{
+                font-size: 0.9rem;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                a {
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 769px) and (max-width:875px){
     .homepagetitle{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         padding: 2.5rem 3.5rem;
         .left{
@@ -217,6 +246,7 @@
     .homepagetitle{
         display: flex;
         justify-content: center;
+        flex-direction: column  ;
         padding: 1.5rem 3.5rem;
         .left{
             .ztitle {
@@ -238,6 +268,22 @@
                     font-size: 1rem;
                 }
             }
+        }   
+    }
+    .sign{
+        display: flex;
+        justify-content: center;
+        flex-direction: column  ;
+        padding: 5rem 3.5rem;
+        h1{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+        a{
+            padding: 0.75rem;
+            font-size: 1rem;
         }
     }
     .right img {

@@ -9,7 +9,7 @@ const Donation = () => {
                 <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773824388/donation_img-1_auxqxk.jpg" alt="" />
             </div>
             <div className="contents content-1">
-                <h2>Self-financing institution</h2>
+                <h2>Self-financing Institution</h2>
                 <p>
                     HKCT is a self-financing college officially recognized by the Hong Kong government. We have always operated on a self-sustaining financial model, with all operational expenses funded exclusively through tuition fees—receiving no government subsidies or institutional grants.
 
@@ -46,7 +46,8 @@ const Donation = () => {
                 </div>
             </div>
             <div className="img img-2">
-                <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773824389/donation_img-2_a4ydli.jpg" alt="" />
+                <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773976883/donations_img-2a_ccu51t.jpg" alt="" />
+                <img src="https://res.cloudinary.com/dzlcfmhts/image/upload/v1773976770/donations_img-2_v5qfnm.jpg" alt="" />
             </div>
         </div>
         <div className="donationsections donationsection-3">
@@ -71,7 +72,7 @@ const Donation = () => {
                 </p>
             </div>
         </div>
-    </div>
+        </div>
         </>
     )
 }
