@@ -57,11 +57,15 @@
     }
     .allcoursebutton{
         margin-bottom: 6rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
         ul{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-items: center;
+            align-items: center;
             gap: 1rem;
             button{
                 width: 11rem;
