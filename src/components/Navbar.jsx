@@ -47,12 +47,14 @@ const Navbar = () => {
             </ul>
         </div>
         <div className='main-sign'>
+            <i className="fa-solid fa-heart"></i>
             <i className="fa-solid fa-cart-shopping"></i>
             <a href="#">Sign-In</a>
         </div>
 
 
         <div className='min-main-burger'>
+            <i className="fa-solid fa-heart"></i>
             <i className="fa-solid fa-cart-shopping"></i>
             <i className="fa-solid fa-circle-user"></i>
             <button className="hamburger-btn" aria-label="打開/關閉菜單" onClick={toggleMenu}>

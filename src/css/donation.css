@@ -213,10 +213,11 @@
     }
 }
 
+/* 未修改 */
 /* 响应式：平板（768px - 992px） */
-@media (max-width: 869px) {
+@media (min-width:800px) and (max-width:889px) {
     .donationcontainer {
-        padding: 2rem 0.5rem;
+        padding: 1.5rem 0.5rem;
     }
     .donationsection-1, .donationsection-2, .donationsection-3 {
         grid-template-columns: 1fr;
@@ -228,6 +229,7 @@
         }
         .content-1, .content-2, .content-3 {
             h2 {
+                /* color: red; */
                 font-size: 1.8rem;
             }
             h3 {
@@ -236,9 +238,13 @@
         }
     }
 }
-@media (min-width:769px) and (max-width:869px){
+
+@media (min-width:769px) and (max-width:799px){
     .donationcontainer {
         padding: 1rem 0.5rem;
+    }
+    .donationsection-1, .donationsection-2, .donationsection-3 {
+        grid-template-columns: 1fr;
     }
 }
 /* 响应式：手机（≤768px） */
@@ -250,9 +256,11 @@
         margin-bottom: 3rem;
     }
     .donationsection-1, .donationsection-2, .donationsection-3 {
+        grid-template-columns: 1fr;
         .content-1, .content-2, .content-3 {
             padding: 2rem 1.5rem;
             h2 {
+                /* color: red; */
                 font-size: 1.6rem;
             }
             h3 {
